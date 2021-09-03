@@ -1,0 +1,15 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: aliceblue;
+}
+.footer > p {
+  margin: 5px 10px 5px 0px;
+  width: fit-content;
+  float: right;
+}
+.footer > p:hover {
+  cursor: pointer;
+  color: gray;
+}
