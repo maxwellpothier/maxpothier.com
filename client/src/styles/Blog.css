@@ -1,0 +1,31 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  height: 300px;
+  width: 250px;
+  margin: 50px;
+}
+.grid-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.grid-art {
+  height: 250px;
+  width: 250px;
+}
+
+.album-title, .artist-name {
+  text-align: center;
+  margin-top: 5px;
+  font-family: 'Ubuntu';
+}
+
+.art-container > img:hover {
+  opacity: 0.8;
+  transition: 0.4s;
+}

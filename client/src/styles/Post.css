@@ -1,0 +1,63 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side-box {
+  display: flex;
+  border: 1px solid blue;
+  height: 1000px;
+  width: 33%;
+  justify-content: center;
+}
+
+.cover-rating-container {
+  border: 1px solid black;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover-art {
+  margin-top: 100px;
+  margin-bottom: 75px;
+}
+
+.rating {
+  border: 1px solid purple;
+  width: 150px;
+  height: 150px;
+}
+
+.right-side-box {
+  border: 1px solid red;
+  height: 1000px;
+  width: 67%;
+}
+
+.post-header {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.post-title {
+  font-family: 'Tourney';
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.post-artist {
+  font-family: 'Ubuntu';
+  text-align: center;
+  color: gray;
+}
