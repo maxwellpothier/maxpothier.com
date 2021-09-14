@@ -1,34 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import albumArt from 'album-art';
+// import albumArt from 'album-art';
 
 class AlbumCard extends React.Component {
   state = { artURL: null, linkName: '' };
 
-  componentDidMount() {
+  /* componentDidMount() {
     this.loadAlbumCover(this.props.album.artist, this.props.album.title);
+    this.createLinkName(this.props.album.artist, this.props.album.title);
+  } */
 
-    this.createLinkName(this.props.album.title);
-  }
-
-  loadAlbumCover(artist, album) {
+  /* loadAlbumCover(artist, album) {
     albumArt(artist, { album: album, size: 'medium' }, (err, res) => {
+      if (artist === "Tame Impala") {
+        console.log(res);
+      }
       this.setState({ artURL: res });
     });
-  }
+  } */
 
-  createLinkName(title) {
-    this.setState({ linkName: title.replace(/\s+/g, '-').toLowerCase() });
-  }
+  /* createLinkName(artist, title) {
+    const newName = artist.replace(/\s+/g, '-').toLowerCase()
+      + "_" + title.replace(/\s+/g, '-').toLowerCase();
+    this.setState({ linkName: newName });
+  } */
 
   render() {
     return (
-      <Link to={`/blog/${this.state.linkName}`} className="link-container">
+      <Link to={`/blog/${this.props.album.id}`} className="link-container">
         <div>
           <div className="grid-art">
             <div className="art-container">
               <img
-                src={this.state.artURL}
+                src={this.props.album.url}
                 alt={this.props.album.title}
                 height="250"
                 width="250"

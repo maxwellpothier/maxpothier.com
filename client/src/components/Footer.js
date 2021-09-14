@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <Link to="/admin" style={{ textDecoration: 'none', color: 'black' }}>
-        <p>Admin</p>
+        <p className="footer-text">Admin</p>
       </Link>
     </div>
   );

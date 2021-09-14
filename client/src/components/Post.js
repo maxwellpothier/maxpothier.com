@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ipsum from '../assets/ipsum';
+import albums from '../assets/albums';
 import '../styles/Post.css';
 import dateformat from 'dateformat';
 
-const tester = {
-  artist: "Nine Inch Nails",
-  title: "Pretty Hate Machine",
-  url: "https://i.scdn.co/image/ab67616d00001e029764c0993e45db213f0e359f"
-}
+const Post = ({ match }) => {
+  const [albumInfo, setAlbumInfo] = useState({});
+  const albumID = match.params.id;
 
-const Post = (/*{ artist, title, url }*/) => {
-  const { artist, title, url } = tester;
-  document.title = title;
+  useEffect(() => {
+    populateState();
+  });
 
+  const populateState = () => {
+    for (let i = 0; i < albums.length; i++) {
+      if (albums[i].id === albumID) {
+        setAlbumInfo(albums[i]);
+      }
+    }
+  }
+  document.title = albumInfo.title
   let now = new Date();
 
   return (
@@ -22,7 +29,7 @@ const Post = (/*{ artist, title, url }*/) => {
         <div className="arrow"></div>
         <div className="cover-rating-container">
           <div className="cover-art">
-            <img src={url} alt={title} height="300" width="300" />
+            <img src={albumInfo.url} alt={albumInfo.id} height="300" width="300" />
           </div>
           <div className="rating">
             <h1>8.4</h1>
@@ -35,11 +42,11 @@ const Post = (/*{ artist, title, url }*/) => {
         <div className="post-header">
 
           <div className="post-title">
-            {title}
+            {albumInfo.title}
           </div>
 
           <div className="post-artist">
-            {artist}
+            {albumInfo.artist}
           </div>
 
           <div className="post-time">
