@@ -1,5 +1,7 @@
 import React from 'react';
+import ipsum from '../assets/ipsum';
 import '../styles/Post.css';
+import dateformat from 'dateformat';
 
 const tester = {
   artist: "Nine Inch Nails",
@@ -11,16 +13,19 @@ const Post = (/*{ artist, title, url }*/) => {
   const { artist, title, url } = tester;
   document.title = title;
 
+  let now = new Date();
+
   return (
     <div className="post-container">
 
       <div className="left-side-box">
+        <div className="arrow"></div>
         <div className="cover-rating-container">
           <div className="cover-art">
-            <img src={url} alt={title} height="250" width="250" />
+            <img src={url} alt={title} height="300" width="300" />
           </div>
           <div className="rating">
-
+            <h1>8.4</h1>
           </div>
         </div>
       </div>
@@ -38,14 +43,14 @@ const Post = (/*{ artist, title, url }*/) => {
           </div>
 
           <div className="post-time">
-
+            {dateformat(now, 'mmmm dS, yyyy')}
           </div>
 
         </div>
 
-      </div>
-
-      <div className="post-content">
+        <div className="post-content">
+          {ipsum}
+        </div>
 
       </div>
 

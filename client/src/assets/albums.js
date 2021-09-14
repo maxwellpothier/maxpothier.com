@@ -36,10 +36,6 @@ const albums = [
     title: "Technique"
   },
   {
-    artist: "Orchestral Manoeuvres in the Dark",
-    title: "Architecture & Morality"
-  },
-  {
     artist: "Cage the Elephant",
     title: "Melophobia"
   },
