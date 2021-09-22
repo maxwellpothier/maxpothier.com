@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Admin.css';
+import CreatePost from './CreatePost';
 
 class Admin extends React.Component {
   state = { isLoggedIn: false, input: '' };
@@ -42,7 +43,7 @@ class Admin extends React.Component {
     else {
       return (
         <div>
-          Welcome
+          <CreatePost />
         </div>
       );
     }

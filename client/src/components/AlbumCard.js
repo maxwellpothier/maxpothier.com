@@ -28,7 +28,7 @@ class AlbumCard extends React.Component {
   render() {
     return (
       <Link to={`/blog/${this.props.album.id}`} className="link-container">
-        <div>
+        <div className="album-card">
           <div className="grid-art">
             <div className="art-container">
               <img

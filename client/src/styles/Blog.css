@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Orkney';
+  src: url("../assets/fonts/Orkney\ Regular.otf") format("opentype");
+}
+
 .grid-container {
   display: flex;
   justify-content: center;
@@ -9,9 +14,13 @@
   width: 250px;
   margin: 50px;
 }
-.grid-item:hover {
-  text-decoration: underline;
+
+.album-card {
   cursor: pointer;
+}
+.album-card:hover {
+  opacity: 0.8;
+  transition: 0.4s;
 }
 
 .grid-art {
@@ -19,15 +28,19 @@
   width: 250px;
 }
 
-.album-title, .artist-name {
+.album-title {
+  text-align: center;
+  margin-top: 5px;
+  font-family: 'Orkney';
+  color: #a5a58d;
+  font-size: 18px;
+}
+.artist-name {
   text-align: center;
   margin-top: 5px;
   font-family: 'Ubuntu';
-}
-
-.art-container > img:hover {
-  opacity: 0.8;
-  transition: 0.4s;
+  font-size: 14px;
+  color: #b7b7a4;
 }
 
 .link-container {
