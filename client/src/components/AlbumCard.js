@@ -5,26 +5,6 @@ import { Link } from 'react-router-dom';
 class AlbumCard extends React.Component {
   state = { artURL: null, linkName: '' };
 
-  /* componentDidMount() {
-    this.loadAlbumCover(this.props.album.artist, this.props.album.title);
-    this.createLinkName(this.props.album.artist, this.props.album.title);
-  } */
-
-  /* loadAlbumCover(artist, album) {
-    albumArt(artist, { album: album, size: 'medium' }, (err, res) => {
-      if (artist === "Tame Impala") {
-        console.log(res);
-      }
-      this.setState({ artURL: res });
-    });
-  } */
-
-  /* createLinkName(artist, title) {
-    const newName = artist.replace(/\s+/g, '-').toLowerCase()
-      + "_" + title.replace(/\s+/g, '-').toLowerCase();
-    this.setState({ linkName: newName });
-  } */
-
   render() {
     return (
       <Link to={`/blog/${this.props.album.id}`} className="link-container">

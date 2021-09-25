@@ -11,7 +11,7 @@ const Header = () => {
       <div className="nav-center">
         <ul className="route-buttons">
           <Link
-            to="/"
+            to="/blog"
             style={{
               textDecoration: 'none',
               color: 'black'
